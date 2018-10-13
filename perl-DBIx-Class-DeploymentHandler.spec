@@ -4,13 +4,13 @@
 #
 Name     : perl-DBIx-Class-DeploymentHandler
 Version  : 0.002222
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/F/FR/FREW/DBIx-Class-DeploymentHandler-0.002222.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/F/FR/FREW/DBIx-Class-DeploymentHandler-0.002222.tar.gz
 Summary  : 'Extensible DBIx::Class deployment'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
-Requires: perl-DBIx-Class-DeploymentHandler-license
+Requires: perl-DBIx-Class-DeploymentHandler-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Carp::Clan)
 BuildRequires : perl(Context::Preserve)
@@ -40,7 +40,7 @@ my $s = My::Schema->connect(...);
 %package dev
 Summary: dev components for the perl-DBIx-Class-DeploymentHandler package.
 Group: Development
-Provides: perl-DBIx-Class-DeploymentHandler-devel
+Provides: perl-DBIx-Class-DeploymentHandler-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBIx-Class-DeploymentHandler package.
@@ -72,12 +72,12 @@ fi
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-DBIx-Class-DeploymentHandler
-cp LICENSE %{buildroot}/usr/share/doc/perl-DBIx-Class-DeploymentHandler/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-DBIx-Class-DeploymentHandler
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-DBIx-Class-DeploymentHandler/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -86,34 +86,34 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Dad.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/Deprecated.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/ScriptHelpers.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Deprecated.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesDeploy.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesVersionStorage.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesVersioning.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/LogImporter.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/LogRouter.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Logger.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Manual/CatalystIntro.pod
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Manual/Intro.pod
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/Types.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/DatabaseToSchemaVersions.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/ExplicitVersions.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/Monotonic.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/Component.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResult.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResultSet.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/Component.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResult.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResultSet.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/WithApplicatorDumple.pm
-/usr/lib/perl5/site_perl/5.26.1/DBIx/Class/DeploymentHandler/WithReasonableDefaults.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Dad.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/ScriptHelpers.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesDeploy.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesVersionStorage.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/HandlesVersioning.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/LogImporter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/LogRouter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Logger.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Manual/CatalystIntro.pod
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Manual/Intro.pod
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/Types.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/DatabaseToSchemaVersions.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/ExplicitVersions.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionHandler/Monotonic.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/Component.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResult.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResultSet.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/Component.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResult.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResultSet.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/WithApplicatorDumple.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBIx/Class/DeploymentHandler/WithReasonableDefaults.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -143,5 +143,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/DBIx::Class::DeploymentHandler::WithReasonableDefaults.3
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-DBIx-Class-DeploymentHandler/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-DBIx-Class-DeploymentHandler/LICENSE
