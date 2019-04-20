@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-DeploymentHandler
 Version  : 0.002230
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETJ/DBIx-Class-DeploymentHandler-0.002230.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETJ/DBIx-Class-DeploymentHandler-0.002230.tar.gz
 Summary  : 'Extensible DBIx::Class deployment'
@@ -21,6 +21,9 @@ BuildRequires : perl(Log::Contextual)
 BuildRequires : perl(Module::Runtime)
 BuildRequires : perl(Moo)
 BuildRequires : perl(MooX::Role::Parameterized)
+BuildRequires : perl(Moose)
+BuildRequires : perl(MooseX::Role::Parameterized)
+BuildRequires : perl(Path::Class)
 BuildRequires : perl(SQL::Translator)
 BuildRequires : perl(Sub::Exporter)
 BuildRequires : perl(Sub::Exporter::Progressive)
@@ -30,6 +33,7 @@ BuildRequires : perl(Text::Brew)
 BuildRequires : perl(Try::Tiny)
 BuildRequires : perl(Type::Tiny)
 BuildRequires : perl(aliased)
+BuildRequires : perl(namespace::autoclean)
 BuildRequires : perl(version)
 
 %description
