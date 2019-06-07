@@ -1,4 +1,4 @@
-0.002231
+0.002232
 perl(Carp::Clan)
 perl(Context::Preserve)
 perl(DBD::SQLite)
@@ -19,6 +19,7 @@ perl(Test::Requires)
 perl(Text::Brew)
 perl(Try::Tiny)
 perl(Type::Tiny)
+perl(YAML)
 perl(aliased)
 perl(namespace::autoclean)
 perl(version)
