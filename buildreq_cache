@@ -1,4 +1,4 @@
-0.002232
+0.002233
 perl(Carp::Clan)
 perl(Context::Preserve)
 perl(DBD::SQLite)
@@ -11,6 +11,7 @@ perl(MooX::Role::Parameterized)
 perl(Moose)
 perl(MooseX::Role::Parameterized)
 perl(Path::Class)
+perl(SQL::SplitStatement)
 perl(SQL::Translator)
 perl(Sub::Exporter)
 perl(Sub::Exporter::Progressive)
