@@ -4,13 +4,14 @@
 #
 Name     : perl-DBIx-Class-DeploymentHandler
 Version  : 0.002233
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Summary  : 'Extensible DBIx::Class deployment'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-DBIx-Class-DeploymentHandler-license = %{version}-%{release}
+Requires: perl-SQL-SplitStatement
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Carp::Clan)
 BuildRequires : perl(Context::Preserve)
@@ -37,6 +38,7 @@ BuildRequires : perl(YAML)
 BuildRequires : perl(aliased)
 BuildRequires : perl(namespace::autoclean)
 BuildRequires : perl(version)
+BuildRequires : perl-SQL-SplitStatement
 
 %description
 NAME
