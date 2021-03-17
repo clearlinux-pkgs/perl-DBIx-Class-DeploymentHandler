@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-DeploymentHandler
 Version  : 0.002233
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Summary  : 'Extensible DBIx::Class deployment'
@@ -142,31 +142,31 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Dad.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/Deprecated.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/ScriptHelpers.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Deprecated.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/HandlesDeploy.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/HandlesVersionStorage.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/HandlesVersioning.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/LogImporter.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/LogRouter.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Logger.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Manual/CatalystIntro.pod
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Manual/Intro.pod
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/Types.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionHandler/DatabaseToSchemaVersions.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionHandler/ExplicitVersions.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionHandler/Monotonic.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/Component.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResult.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResultSet.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Standard.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Standard/Component.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResult.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResultSet.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/WithApplicatorDumple.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DeploymentHandler/WithReasonableDefaults.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Dad.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/DeployMethod/SQL/Translator/ScriptHelpers.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/HandlesDeploy.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/HandlesVersionStorage.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/HandlesVersioning.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/LogImporter.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/LogRouter.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Logger.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Manual/CatalystIntro.pod
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Manual/Intro.pod
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/Types.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionHandler/DatabaseToSchemaVersions.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionHandler/ExplicitVersions.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionHandler/Monotonic.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/Component.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResult.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Deprecated/VersionResultSet.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/Component.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResult.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/VersionStorage/Standard/VersionResultSet.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/WithApplicatorDumple.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBIx/Class/DeploymentHandler/WithReasonableDefaults.pm
