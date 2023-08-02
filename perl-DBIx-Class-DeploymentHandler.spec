@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-DeploymentHandler
 Version  : 0.002233
-Release  : 29
+Release  : 30
 URL      : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MM/MMCCLIMON/DBIx-Class-DeploymentHandler-0.002233.tar.gz
 Summary  : 'Extensible DBIx::Class deployment'
